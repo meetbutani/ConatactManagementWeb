@@ -1,0 +1,216 @@
+.main {
+    // width: fit-content;
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+
+    .top {
+        display: flex;
+        flex-direction: row;
+        column-gap: 20px;
+
+        input {
+            background-color: whitesmoke;
+            // outline: none;
+            border: 2px solid black;
+            border-radius: 6px;
+            padding: 4px 10px;
+            font-size: 16px;
+        }
+
+        button {
+            min-width: 90px;
+            padding: 10px 15px;
+            border-radius: 100px;
+            border: none;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+        }
+
+        #clear-btn {
+            display: none;
+            background-color: blue;
+        }
+
+        #add-popup-btn {
+            background-color: limegreen;
+        }
+
+        #delete-btn {
+            background-color: red;
+        }
+
+    }
+
+    table,
+    th,
+    td {
+        border: 1px solid lightgrey;
+        // border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    .table-container {
+        width: 100%;
+        display: flex;
+    }
+
+    .table {
+        width: 100%;
+
+        thead {
+            th {
+                font-size: 16px;
+                min-width: 20px;
+                padding: 5px 10px;
+            }
+        }
+
+        tbody {
+
+            td {
+                font-size: 16px;
+                min-width: 20px;
+                padding: 5px 10px;
+            }
+
+            button {
+                width: 100%;
+                border-radius: 100px;
+                border: none;
+                font-size: 16px;
+                font-weight: bold;
+                color: white;
+                background-color: transparent;
+            }
+
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+        }
+    }
+}
+
+#popup {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    flex-direction: column;
+    background-color: #000000D0;
+
+    .popup-container {
+        display: flex;
+        width: 300px;
+        height: fit-content;
+        margin: 50px auto;
+        flex-direction: column;
+        background-color: white;
+        padding: 50px;
+        border-radius: 10px;
+        position: relative;
+
+        #popup-close {
+            width: fit-content;
+            align-self: flex-end;
+            background-color: transparent;
+            outline: none;
+            border: none;
+            font-size: 20px;
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            cursor: pointer;
+        }
+
+        .form-add-contact {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            row-gap: 20px;
+
+            .name {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                column-gap: 10px;
+
+                .name-div {
+                    width: 48.33%;
+                }
+            }
+
+            .input-field {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+
+                label {
+                    color: #3f3f3f;
+                    font-size: 16px;
+                    margin-bottom: 4px;
+                    font-weight: bold;
+                }
+
+                input {
+                    background-color: whitesmoke;
+                    // outline: none;
+                    border: none;
+                    border-radius: 3px;
+                    padding: 4px 10px;
+                    font-size: 16px;
+                }
+            }
+
+            .error {
+                color: red;
+                font-size: 14px;
+            }
+
+            .btns {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+
+                button {
+                    min-width: 90px;
+                    padding: 10px 15px;
+                    border-radius: 100px;
+                    border: none;
+                    font-size: 16px;
+                    font-weight: bold;
+                    color: white;
+                }
+
+                #add-btn,
+                #update-btn {
+                    background-color: limegreen;
+                }
+
+                #cancel-btn {
+                    background-color: red;
+                }
+            }
+        }
+    }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+    appearance: textfield;
+}

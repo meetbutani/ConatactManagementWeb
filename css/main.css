@@ -1,0 +1,184 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+.main .top {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+.main .top input {
+  background-color: whitesmoke;
+  border: 2px solid black;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 16px;
+}
+.main .top button {
+  min-width: 90px;
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+.main .top #clear-btn {
+  display: none;
+  background-color: blue;
+}
+.main .top #add-popup-btn {
+  background-color: limegreen;
+}
+.main .top #delete-btn {
+  background-color: red;
+}
+.main table,
+.main th,
+.main td {
+  border: 1px solid lightgrey;
+  border-spacing: 0;
+}
+.main .table-container {
+  width: 100%;
+  display: flex;
+}
+.main .table {
+  width: 100%;
+}
+.main .table thead th {
+  font-size: 16px;
+  min-width: 20px;
+  padding: 5px 10px;
+}
+.main .table tbody td {
+  font-size: 16px;
+  min-width: 20px;
+  padding: 5px 10px;
+}
+.main .table tbody button {
+  width: 100%;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: transparent;
+}
+.main .table tbody .center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#popup {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.8156862745);
+}
+#popup .popup-container {
+  display: flex;
+  width: 300px;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: 50px auto;
+  flex-direction: column;
+  background-color: white;
+  padding: 50px;
+  border-radius: 10px;
+  position: relative;
+}
+#popup .popup-container #popup-close {
+  width: -moz-fit-content;
+  width: fit-content;
+  align-self: flex-end;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+#popup .popup-container .form-add-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}
+#popup .popup-container .form-add-contact .name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
+}
+#popup .popup-container .form-add-contact .name .name-div {
+  width: 48.33%;
+}
+#popup .popup-container .form-add-contact .input-field {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+#popup .popup-container .form-add-contact .input-field label {
+  color: #3f3f3f;
+  font-size: 16px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+#popup .popup-container .form-add-contact .input-field input {
+  background-color: whitesmoke;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 10px;
+  font-size: 16px;
+}
+#popup .popup-container .form-add-contact .error {
+  color: red;
+  font-size: 14px;
+}
+#popup .popup-container .form-add-contact .btns {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+#popup .popup-container .form-add-contact .btns button {
+  min-width: 90px;
+  padding: 10px 15px;
+  border-radius: 100px;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+}
+#popup .popup-container .form-add-contact .btns #add-btn,
+#popup .popup-container .form-add-contact .btns #update-btn {
+  background-color: limegreen;
+}
+#popup .popup-container .form-add-contact .btns #cancel-btn {
+  background-color: red;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+}/*# sourceMappingURL=main.css.map */

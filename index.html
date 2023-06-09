@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact App</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="top">
+            <input type="text" id="search-inp" name="search-inp" placeholder="Search">
+            <button type="button" id="clear-btn" name="clear-btn">Clear Search</button>
+            <button type="button" id="add-popup-btn" name="add-popup-btn">Add Contact</button>
+            <button type="button" id="delete-btn" name="delete-btn">Delete</button>
+        </div>
+        <div class="table-container">
+            <table class="table" aria-describedby="">
+                <thead class="thead">
+                    <tr>
+                        <th><input type="checkbox" name="select-all" id="select-all"></th>
+                        <th>Name</th>
+                        <th>Phone Number</th>
+                        <th>Email</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="contact-list">
+    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div id="popup">
+        <div class="popup-container">
+            <button type="button" id="popup-close" onclick="hidePopup()">
+                <i class="fa-solid fa-xmark"style="color: #000000;"></i>
+            </button>
+            <form class="form-add-contact" action="" method="post">
+                <div class="name">
+                    <div class="input-field name-div">
+                        <label for="fname">First Name: </label>
+                        <input type="text" name="fname" id="fname">
+                        <span class="error" id="err-fname"></span>
+                    </div>
+                    <div class="input-field name-div">
+                        <label for="lname">Last Name: </label>
+                        <input type="text" name="lname" id="lname">
+                        <span class="error" id="err-lname"></span>
+                    </div>
+                </div>
+                <div class="input-field">
+                    <label for="pnum">Mobile Number: </label>
+                    <input type="number" name="pnum" id="pnum">
+                    <span class="error" id="err-pnum"></span>
+                </div>
+                <div class="input-field">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" id="email">
+                    <span class="error" id="err-email"></span>
+                </div>
+                <div class="btns">
+                    <button type="button" id="add-btn" name="add-btn">Add</button>
+                    <button type="button" id="update-btn" name="update-btn">Save</button>
+                    <button type="button" id="cancel-btn" name="cancel-btn" onclick="hidePopup()">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+
+</html>
